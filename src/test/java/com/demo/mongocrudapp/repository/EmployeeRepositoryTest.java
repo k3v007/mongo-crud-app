@@ -2,6 +2,7 @@ package com.demo.mongocrudapp.repository;
 
 import com.demo.mongocrudapp.entity.Employee;
 import com.demo.mongocrudapp.entity.json.Address;
+import com.demo.mongocrudapp.enums.DesignationType;
 import com.demo.mongocrudapp.repository.mongo.EmployeeRepository;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.assertj.core.api.Assertions;
@@ -39,6 +40,7 @@ class EmployeeRepositoryTest {
                 Employee.builder()
                         .name("Test User XXX")
                         .employeeCode(RandomStringUtils.randomAlphabetic(6).toUpperCase())
+                        .designation(DesignationType.SDE_II)
                         .dateOfBirth(LocalDate.of(1999, 1, 1))
                         .address(
                                 Address.builder()

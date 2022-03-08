@@ -2,6 +2,7 @@ package com.demo.mongocrudapp.entity;
 
 import com.demo.mongocrudapp.entity.base.BaseDocument;
 import com.demo.mongocrudapp.entity.json.Address;
+import com.demo.mongocrudapp.enums.DesignationType;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -28,6 +29,9 @@ public class Employee extends BaseDocument {
 
     @Field("employee_code")
     private String employeeCode;
+
+    @Field("designation")
+    private DesignationType designation;
 
     @Field("date_of_birth")
     private LocalDate dateOfBirth;
