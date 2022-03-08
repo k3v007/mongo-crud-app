@@ -1,8 +1,6 @@
 package com.demo.mongocrudapp.entity.base;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.CreatedDate;
@@ -17,9 +15,7 @@ import java.time.LocalDateTime;
  */
 @Getter
 @Setter
-@NoArgsConstructor
-@AllArgsConstructor
-public class BaseDocument {
+public abstract class BaseDocument {
 
     @Id
     @Field("_id")
